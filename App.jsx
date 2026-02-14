@@ -1,18 +1,20 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LanguageProvider } from './LanguageContext';
+
 import Navbar from './Navbar';
-import Footer from './components/Footer';
-import ProtectedRoute from './components/ProtectedRoute';
+import Footer from './Footer';
+import ProtectedRoute from './ProtectedRoute';
+
 import Home from './Home';
-import Artisans from './pages/Artisans';
-import Products from './pages/Products';
-import Contact from './pages/Contact';
-import Feedback from './pages/Feedback';
-import Cart from './pages/Cart';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ProductManagement from './pages/ProductManagement';
-import Profile from './pages/Profile';
+import Artisans from './Artisans';
+import Products from './Products';
+import Contact from './Contact';
+import Feedback from './Feedback';
+import Cart from './Cart';
+import Login from './Login';
+import Register from './Register';
+import ProductManagement from './ProductManagement';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <Router>
         <div className="flex flex-col min-h-screen">
           <Navbar />
+
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
@@ -29,12 +32,15 @@ function App() {
               <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
               <Route path="/feedback" element={<ProtectedRoute><Feedback /></ProtectedRoute>} />
               <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
+
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+
               <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
               <Route path="/admin/products" element={<ProtectedRoute><ProductManagement /></ProtectedRoute>} />
             </Routes>
           </main>
+
           <Footer />
         </div>
       </Router>
@@ -43,4 +49,3 @@ function App() {
 }
 
 export default App;
-
