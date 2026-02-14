@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './contexts/LanguageContext';
-import Navbar from './components/Navbar';
+import { LanguageProvider } from './LanguageContext';
+import Navbar from './Navbar';
 import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';
-import Home from './pages/Home';
+import Home from './Home';
 import Artisans from './pages/Artisans';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
@@ -43,3 +43,4 @@ function App() {
 }
 
 export default App;
+
